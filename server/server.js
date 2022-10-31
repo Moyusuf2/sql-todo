@@ -85,7 +85,7 @@ console.log('Your fav food is:', process.env.FAV_FOOD)
 
 console.log('your preferred port is:', process.env.PORT)
 
-const port = process.env || 3000;
+const port = process.env.PORT || 3000;
 
 // const port = 3000;
 
