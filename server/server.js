@@ -1,3 +1,4 @@
+//needs to be first fine of code to run this correctly
 require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -76,7 +77,17 @@ app.put('/tasks/:id', (req, res) => {
     });
 });
 
-const port = 3000;
+// console.log('process.env',process.env)
+
+console.log('your home dir is:', process.env.HOME)
+
+console.log('Your fav food is:', process.env.FAV_FOOD)
+
+console.log('your preferred port is:', process.env.PORT)
+
+const port = process.env || 3000;
+
+// const port = 3000;
 
 console.log(`We're going to listen on port`, port);
 app.listen(port, () => {
